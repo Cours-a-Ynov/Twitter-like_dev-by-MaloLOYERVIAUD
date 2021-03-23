@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter-like</title>
+</head>
+<h1>Twitter-like</h1>
+
+<body>
+    <div class="link_post_tweet">
+        <a href="http://localhost:5000/tweetwow">Ajouter un tweet</a>
+    </div>
+    <h2>Les tweets postez :</h2>
+    <ul>
+        {% for newPost in twitter %}
+        <li>{{newPost["nom"]}}: {{newPost["msg"]}}</li>
+        <button type="submit">Liker<3</button>
+        <div class="link_post_response">
+        <a href="http://localhost:5000/tweetrsp">Ajouter une réponse</a>
+            <li>{{newPost["nomrsp"]}}: {{newPost["rsp"]}}</li>
+        {% endfor %}
+        <button type="submit">Liker<3</button>
+    </div>
+
+    </ul>
+
+</body>
+
+</html>

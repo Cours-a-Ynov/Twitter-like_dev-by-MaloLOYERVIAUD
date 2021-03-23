@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <body>
+        <ul>
+            {% for tweet in twitter %}
+                <li>{{tweet["nom"]}}: {{tweet["msg"]}}</li>
+            {% endfor %}
+        </ul>
+        <form action="/post" method="post">
+            <input type="text" name="nom">
+            <input type="text" name="rsp">
+            <br/>
+            <button type="submit">Envoyer la reponse !</button>
+        </form>
+    </body>
+</html>
